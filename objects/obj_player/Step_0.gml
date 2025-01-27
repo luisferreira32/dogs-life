@@ -37,20 +37,25 @@ if((_poop && is_pooping) || (is_pooping && !has_pooped) || (is_pooping && has_po
     has_pooped = false;
         
     // calculate the score based on the magic formula and reset the poop_meter
-    if (poop_meter > global.max_poop_score) {
-        global.max_poop_score = poop_meter 
+    if (poop_meter > obj_game_state.max_poop_score) {
+        obj_game_state.max_poop_score = poop_meter 
     }
     poop_meter = 0
-} else if (_ver != 0 && _hor != 0) {
-    // diagonal walk, multiply sqrt(2)/2
-    move_and_collide(round(_hor * move_speed * 0.707), round(_ver * move_speed * 0.707), tilemap); 
-} else if (_ver != 0 || _hor != 0) {
-    // horizontal and vertical walk
-    move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed); 
+} else {
+    // movement
+    move_collide_and_select_sprite(
+        _hor, 
+        _ver,
+        move_speed,
+        obj_game_state.collision_objects, 
+        prev_sprite,
+        player_sprites); 
+    prev_sprite = sprite_index;
 }
 
 
-// Sprite calculation
+
+// Sprite calculation, post move_collide_and_select_sprite to overwrite it
 
 if (is_pooping) {
     image_speed = 1
@@ -63,20 +68,4 @@ if (is_pooping) {
     } else if (prev_sprite == spr_player_up) {
         sprite_index = spr_poop_left; // poop down spr missing
     }
-} else if(_hor != 0 || _ver != 0) {
-    image_speed = 1
-    if(_ver > 0) {
-        sprite_index = spr_player_down;
-    } else if (_ver < 0) {
-        sprite_index = spr_player_up;
-    } else if (_hor > 0) {
-        sprite_index = spr_player_right;
-    } else if (_hor < 0) {
-        sprite_index = spr_player_left;
-    }
-    prev_sprite = sprite_index;
-} else {
-    sprite_index = prev_sprite;
-    image_speed = 0
-    image_index = 0
 }

@@ -10,12 +10,15 @@ POOP_METER_BURST = 100;
 POOP_METER_COLOR = #664433;
 
 // The player variable definitions
-move_speed = 2;
+move_speed = 1;
 poop_meter = 0; // 0 -> 100
 is_pooping = false;
 has_pooped = false;
 poop_duration = POOP_ANIMATION_DURATION_MS; 
 prev_sprite = spr_player_right;
 
-// Get some instances necessary for player interactions
-tilemap = layer_tilemap_get_id("Tiles_Walls");
+// Sprite array
+player_sprites = [spr_player_down, spr_player_up, spr_player_right, spr_player_left]
+
+// Some constant variables
+instances_layer = layer_get_id("Instances")
