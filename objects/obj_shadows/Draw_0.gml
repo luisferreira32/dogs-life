@@ -6,9 +6,9 @@ draw_sprite_ext(
     spr_shadow, 
     0, 
     x, 
-    y-5, 
-    0.7*image_xscale*sprite_get_width(spr_shadow)/sprite_width, 
-    image_yscale*sprite_get_height(spr_shadow)/sprite_height, 
+    y-5*sprite_width/sprite_get_width(spr_shadow), 
+    0.7*image_xscale*sprite_width/sprite_get_width(spr_shadow), 
+    image_yscale*sprite_height/sprite_get_height(spr_shadow), 
     0, 
     c_black, 
     0.3
