@@ -8,7 +8,7 @@ var hud_text = string_replace_all(string_format(game_time_h, 2, 0), " ", "0")
     + ":" 
     + string_replace_all(string_format(game_time_m, 2, 0), " ", "0") 
     + "\n" 
-    + string_replace_all(string_format(global.max_poop_score, 3, 0), " ", "0") 
+    + string_replace_all(string_format(max_poop_score, 3, 0), " ", "0") 
 
 draw_set_font(fn_default);
 draw_set_halign(fa_right);

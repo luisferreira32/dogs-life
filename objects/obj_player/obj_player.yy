@@ -15,8 +15,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_shadows",
-    "path":"objects/obj_shadows/obj_shadows.yy",
+    "name":"obj__parent",
+    "path":"objects/obj__parent/obj__parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

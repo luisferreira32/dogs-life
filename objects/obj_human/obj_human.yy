@@ -1,11 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_poop",
+  "%Name":"obj_human",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_poop",
+  "name":"obj_human",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_poop",
-    "path":"sprites/spr_poop/spr_poop.yy",
+    "name":"spr_human_down",
+    "path":"sprites/spr_human_down/spr_human_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,

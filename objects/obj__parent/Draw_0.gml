@@ -1,5 +1,4 @@
 /// @description Draw the shadow sprite per object child based on the child sprite size 
-/// 
 
 
 draw_sprite_ext(

@@ -17,6 +17,6 @@ if (is_pooping && !has_pooped) {
         poop_x -= 10;
     }
     
-    instance_create_layer(poop_x, y, layer, obj_poop);
+    instance_create_layer(poop_x, y, instances_layer, obj_poop);
     has_pooped = true;
 }
