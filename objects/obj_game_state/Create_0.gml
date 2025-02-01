@@ -17,7 +17,12 @@ game_time_m = 0;
 
 // Necessary variables for objects interactions, access here to add or remove based on
 // level progressing
-collision_objects = [layer_tilemap_get_id("Tiles_Walls"), obj_player, obj_human];
+collision_objects =  [
+    layer_tilemap_get_id("Tiles_Walls"),
+    obj_player,
+    obj_human,
+    obj__furniture, // all furniture that is collidable should be here
+]
 
 // help out in debugging, remove once we want to ship
 show_debug_overlay(true)
