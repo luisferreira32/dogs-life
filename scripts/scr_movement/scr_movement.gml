@@ -10,22 +10,41 @@ function move_collide_and_select_sprite(_hor, _ver, _mov_speed, _col, _prev_spri
 {
     if (_ver != 0 && _hor != 0) {
         // diagonal walk, multiply sqrt(2)/2
-        move_and_collide(round(_hor * _mov_speed * 0.707), round(_ver * _mov_speed * 0.707), _col); 
+        move_and_collide(
+            round(_hor * _mov_speed * 0.707), 
+            round(_ver * _mov_speed * 0.707), 
+            _col, 
+            undefined, 
+            undefined, 
+            undefined, 
+            round(_mov_speed* 0.707), 
+            round(_mov_speed* 0.707)
+        ); 
     } else if (_ver != 0 || _hor != 0) {
         // horizontal and vertical walk
-        move_and_collide(_hor * _mov_speed, _ver * _mov_speed, _col, undefined, undefined, undefined, _mov_speed, _mov_speed); 
+        move_and_collide(
+            _hor * _mov_speed, 
+            _ver * _mov_speed, 
+            _col, 
+            undefined, 
+            undefined, 
+            undefined, 
+            _mov_speed, 
+            _mov_speed
+        ); 
     }
     
     if(_hor != 0 || _ver != 0) {
         image_speed = 1
-        if(_ver > 0) {
-            sprite_index = _sprites[0];
-        } else if (_ver < 0) {
-            sprite_index = _sprites[1];
-        } else if (_hor > 0) {
+        // if diagonal, start with horizontal sprites
+        if (_hor > 0) {
             sprite_index = _sprites[2];
         } else if (_hor < 0) {
             sprite_index = _sprites[3];
+        } else if(_ver > 0) {
+            sprite_index = _sprites[0];
+        } else if (_ver < 0) {
+            sprite_index = _sprites[1];
         }
     } else {
         sprite_index = _prev_sprite;

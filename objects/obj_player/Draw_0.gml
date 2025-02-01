@@ -31,5 +31,7 @@ if (poop_meter > POOP_METER_WARN) {
     draw_set_alpha(1.0);
 }
 
-// draw the shadows and self based on parent code
-event_inherited();
+// draw itself
+draw_self();
+
+// TODO: missing dog shadows
