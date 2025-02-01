@@ -1,7 +1,7 @@
 /// @description 
 
 // consts
-RE_CALCULATE_MOVEMENT = 120 // steps == frames
+RE_CALCULATE_MOVEMENT = 240 // steps == frames
 
 // draw variables
 prev_sprite = spr_human_down;
