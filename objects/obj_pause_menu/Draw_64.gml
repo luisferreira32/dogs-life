@@ -1,4 +1,4 @@
-/// @description Simple GUI to indicate we're paused
+/// @description Simple pause menu with only the option to re-start the game
 
 var text_x = view_wport[VIEW_PORT_IDX]/2;
 var text_y = view_hport[VIEW_PORT_IDX]/2;

@@ -17,5 +17,8 @@ if (game_time_h >= 24) {
 
 // out-of-game interaction, e.g., pause, menu, etc.
 if (keyboard_check_released(vk_escape)) {
-    instance_create_depth(0, 0, 0, obj_pause);
+    instance_create_layer(0, 0, "Instances", obj_pause, {
+        paused_obj: obj_pause_menu,
+        draw_prev_surface: true,
+    });
 }
