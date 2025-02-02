@@ -22,10 +22,11 @@ CHAT_TEXT_W = display_get_gui_width()-2*CHAT_WINDOW_DELTA_X-2*TEXT_DELTA_X
 CHAT_TEXT_H = CHAT_WINDOW_H - 30;
 
 // variables for the dialog
-dialog = [];
-current_dialog = {
-    words: string_split(PLACEHOLDER_TEXT, " "),
-};
+dialog = new dialog_handler();
+dialog.add(PLACEHOLDER_TEXT);
+dialog.add(PLACEHOLDER_TEXT);
+
+current_dialog = dialog.pop();
 display_offset = 0;
 display_len = 0;
 display_dialog_done = false;

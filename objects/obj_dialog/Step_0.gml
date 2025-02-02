@@ -34,8 +34,16 @@ if (keyboard_check_released(vk_tab)) {
         display_len = 0;
         display_dialog_clock_ms = 0;
     } else if (display_dialog_done) {
-        // pop the next message, if non exists, exit pause
-        instance_destroy(obj_pause); 
+        if (dialog.count() == 0 ) {
+            instance_destroy(obj_pause);
+        } else {
+            // pop and reset all display variables
+            current_dialog = dialog.pop();
+            display_dialog_done = false;
+            display_dialog_clock_ms = 0;
+            display_offset = 0;
+            display_len = 0;
+        }
     }
 } 
 
