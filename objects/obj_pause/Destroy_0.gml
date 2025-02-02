@@ -7,6 +7,4 @@ instance_destroy(paused_obj_instance);
 // allow instances to go back to life
 instance_activate_all();
 // memory free!
-if (draw_prev_surface) {
-    surface_free(pause_surface);
-}
+surface_free(pause_surface);

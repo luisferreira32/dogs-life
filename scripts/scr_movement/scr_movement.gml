@@ -1,4 +1,4 @@
-/// @function move_follow(object, speed);
+/// @function move_collide_and_select_sprite(_hor, _ver, _mov_speed, _col, _prev_sprite , _sprites);
 /// @param {real} _hor The horizontal direction of the Object
 /// @param {real} _ver The vertical direction of the Object
 /// @param {real} _mov_speed The allowed movement speed of the Object
