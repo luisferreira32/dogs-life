@@ -8,6 +8,8 @@ REAL_TO_GAME_TIME_RATIO = 1;
 DAY_START_HOUR = 6;
 
 // Variables
+
+// player variables
 // TODO: load most of this from save file
 // TODO: saves are done at game state every day
 max_poop_score = 0;
@@ -25,5 +27,5 @@ collision_objects =  [
 ]
 
 // help out in debugging, remove once we want to ship
-show_debug_overlay(true)
+// show_debug_overlay(true)
 show_debug_log(true)

@@ -11,8 +11,8 @@
   "name":"obj_human",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"npc",
+    "path":"folders/Objects/npc.yy",
   },
   "parentObjectId":{
     "name":"obj__parent",
